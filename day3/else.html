@@ -16,15 +16,17 @@
         //     document.write("음수입니다")
         // }
 
-        let score = 100;
-        if(score > 89){
+        let score = prompt("점수를 입력하세요") 
+        if(score >= 90){
             document.write("A")
-        }else if(score > 79){
+        }else if(score >= 80){
             document.write("B")
-        }else if(score > 69){
+        }else if(score >= 70){
             document.write("c")
-        }else if (score <= 59){
+        }else if(score >= 60){
             document.write("D")
+        }else {
+            document.write("F")
         }
 
     </script>
