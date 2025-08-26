@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>배열최고점수찾기</title>
 </head>
 
 <body>
@@ -47,9 +47,16 @@
         // 빈 배열의 마지막 인덱스에 새 데이터를 삽입하는 배열객체 매서드 사용헤애힘
 
         for(let i = 0; i < student.length; i++){
-            
+            if(student[i].score >= roundScore){
+                passedStudent.push(student[i]);
+            }
         }
 
+        console.log(passedStudent);
+
+        for(let i = 0; i < passedStudent.length; i++){
+            document.write(`${passedStudent[i].name} : ${passedStudent[i].score}<br>`);
+        }
     </script>
     
 </body>
