@@ -7,7 +7,80 @@
 </head>
 <body>
     <script>
-        
+        // let 변수 = new String("문자형데이터");
+
+        // let text = "Hello World";
+
+        /* alt shift a
+        1. charAt(index) : 문자열에서 인덱스 변호에 해당하는 문자를 반환
+        2. indexOf("찾을 문자") : 문자열에서 왼쪾부터 찾을 문자와 일치하는 문자를 찾아 가장
+        먼저 일치하는 문자의 인덱스 번호를 반환한다.
+        3. lastIndexOf("찾을 문자") : 문자열에서 오른쪽에서 ( 오른쪽에서 찾되, 문자의 시작
+        인덱스를 반환한다.)
+        4. match ("찾을 문자") : 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저
+        찾은 문자를 반환한다.
+        5. replace("바꿀문자", "새문자") : 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 
+        제일 먼저 찾은 문자를 새 문자로 치환한다.
+        6. search("찾을 문자") : 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 
+        일치하는 인덱스 번호로 반환한다
+        7. slice(a,b) : a개의 문자를 자르고 b번째 이후에 문자와 남은 문자를 반환한다.
+
+        */
+
+        let text = "Hello Thank you good luck to you"
+        let text2 = "hihi";
+
+        // charAt(index)
+        document.write(text.chartA(16),"<br>");
+
+        // indexOf("찾을 문자")
+        document.write(text.indexOf("you"),"<br>");
+
+        // match("찾을 문자")
+        document.write(text.match("luck"),"<br>");
+
+        // replace("바꿀 문자","새문자")
+        document.write(text.replace("you","me"),"<br>");
+
+        // search("찾을 문자")
+        document.write(text.search("you"),"<br>");
+
+        // slice(a,b)
+        // document.write(text.search("you"),"<br>");
+
+        // substr(a,문자 개수)
+        document.write(text.substr(21,4),"<br>");
+
+        // suvstring(a,b)
+        document.write(text.substring(6,12),"<br>");
+
+        // split("문자")
+        let setText = text.split(" ");
+        console.log(setText);
+
+        // toLowerCase()
+        // toUpperCase()
+        document.write(text.toLowerCase(),"<br>");
+        document.write(text.toUpperCase(),"<br>");
+
+        // concat
+         document.write(text.concet(text2),"<br>");
+
+        //charCodeAt(index)
+        document.write(text.charCodeAt(0),"<br>");
+
+        // fromCharCode(아스카코드값)
+        document.write(String.fromCharCode(72),"<br>");
+
+        // trim()
+        let text3 = "    goldeBell  "
+        console.log(text3);
+        console.log(text3.trim());
+
+        let hello = "안녕하세요~";
+        console.log(hello.slice(0.3));
+        console.log(hello.slice(-4,6));
+
     </script>
 </body>
 </html>
