@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,33 +15,47 @@
             height: 5000px;
         }
 
-        header{
+        header {
             height: 80px;
             background-color: crimson;
             position: fixed;
             top: 0;
             width: 100%;
+            transition: ;
         }
 
         .lorem {
             margin-top: 80px;
         }
 
-        header.hide{
-            transform:  translateY(100%);
+        header.hide {
+            transform: translateY(100%);
             opacity: 0;
         }
     </style>
 </head>
+
 <body>
     <header></header>
     <div class="lorem">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio accusantium!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio accusantium!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio accusantium!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio accusantium!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio accusantium!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio accusantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit
+        dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio
+        accusantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit
+        dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio
+        accusantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit
+        dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio
+        accusantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit
+        dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio
+        accusantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit
+        dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio
+        accusantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus placeat aliquid, corporis sit
+        dolorem hic expedita obcaecati architecto non veniam beatae animi eaque repudiandae dolores quo ex odio
+        accusantium!
     </div>
     <script>
         /* 
@@ -51,28 +66,29 @@
         5. 스크롤을 내렸다면 새로운 스크롤 값이 들어가야한다.
          */
 
-         const header = document.querySelector("header");
+        const header = document.querySelector("header");
         //  const : 상수
         // console.log(header);
 
-         let posY = 0;
-         window.addEventListener("scroll",(e)=>{
-            if(posY < window.scrollY){
-                // headerHeide();
-            }else {
-                // headerShow(;)
+        let posY = 0;
+        window.addEventListener("scroll", (e) => {
+            if (posY < window.scrollY) {
+                headerHeide();
+            } else {
+                headerShow();
             }
-
-         })
+            posY = window.scrollY;
+        })
         //  console.log(window.scrollY)
 
-        function headerHeide(){
-
+        function headerHeide() {
+            header.classList.add("hide");
         }
 
-        function headerShow(){
-
+        function headerShow() {
+            header.classList.remove("hide");
         }
     </script>
 </body>
+
 </html>
