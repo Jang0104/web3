@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        /* 
+        functipn 함수이름(){
+            기능코드 작성
+        }
+        */
+
+        let count = 0;
+        function firstfunction(){
+            count++;
+            document.write(`안녕하세요 ${count}<br>`);
+        }
+
+        // 함수는 객체가 없음
+        firstfunction();
+
+        let secondfunction = function(){
+            count2--;
+            document.write(`안녕히계세요 ${count2}<br`>);
+        }
+
+            secondfunction();
+    </script>
+</body>
+</html>
