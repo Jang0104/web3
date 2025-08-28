@@ -10,17 +10,20 @@
 <body>
     <script>
         // 유저에게 이름을 입력받아 대문자로 변경하여 출력하기
-        // 전화번호를 입력 받고 마지막 4 자리를 ****로 처리
+        // 전화번호를 입력받을건데 입력받은 전화번호의 마지막 4자리를 ****로 처리할것
+        // 01012345678 -> 0101234****
 
-        let userName = prompt("영문자로 성함을 작성해 주세요.");
-        let upperName = userName.toupperCase();
+        let userName = prompt("여권에 쓰여진 이름을 입력해주세요");
+        let upperName = userName.toUpperCase();
         document.write(upperName);
 
-        let userNum = prompt("전화번호를 입력하세요.");
-        let upperNum = phone.slice(0, -4) + "****";
-        document.write(upperNum);
-        
-        </script>
+        let userNumber = prompt("전화번호를 입력해주세요", "01012345678 형식으로 입력");
+        let changeNum = userNumber.substring(0, userNumber.length - 4) + "****";
+
+        document.write(changeNum);
+
+
+    </script>
 </body>
 
 </html>
