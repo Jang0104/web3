@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...args</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        ...args : 함수에 전달될 모든 값을 배열형태로 다룰 수 있음
+        */
+        function showArgs(...args) {
+
+            console.log(args);
+        }
+
+        showArgs(1,2,3);
+        showArgs("a","b","c");
+        showArgs();
+
+        function sum(...args){
+            let total = 0;
+            for(let num of args){
+                
+            }
+        }
+    </script>
+</body>
+
+</html>
